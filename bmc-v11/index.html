@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Bùi Mạnh Cường — Marketing, Ads, Content & Creative." />
+  <title>Bùi Mạnh Cường | Marketing Portfolio</title>
+  <!-- BMC Portfolio V11: Cinematic Growth OS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#f2eee8;
+  --paper:#fbfaf7;
+  --paper-2:#e8dfd2;
+  --ink:#1f1b17;
+  --muted:#766d64;
+  --line:#d8cec2;
+  --brown:#866d55;
+  --brown-dark:#4e4035;
+  --sand:#d7c3aa;
+  --cream:#fffdf8;
+  --white:#fff;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+button{font:inherit}
+.section{width:min(var(--max),calc(100% - 64px));margin:auto}
+.cursor-dot{position:fixed;width:24px;height:24px;border:1px solid rgba(78,64,53,.45);border-radius:50%;pointer-events:none;z-index:200;transform:translate(-50%,-50%);transition:width .2s,height .2s;background:rgba(255,255,255,.08);backdrop-filter:blur(2px)}
+.header{position:fixed;z-index:100;top:0;left:0;right:0;height:84px;padding:0 max(32px,calc((100vw - var(--max))/2));display:flex;align-items:center;gap:34px;background:rgba(242,238,232,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(107,93,79,.12)}
+.logo{width:74px;height:44px;border:1.5px solid var(--ink);border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;font-family:'Manrope';font-weight:800;letter-spacing:-.055em;font-size:19px;padding:0 11px;flex:0 0 auto;background:rgba(255,255,255,.34)}
+.logo span{line-height:1;white-space:nowrap}
+.logo i{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--brown);right:-12px;bottom:7px;box-shadow:0 0 0 4px var(--bg)}
+.nav{margin-left:auto;display:flex;gap:28px;color:#625a52;font-size:13px;font-weight:600}.nav a{position:relative}.nav a:after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--ink);transition:.25s}.nav a:hover:after{width:100%}
+.header-cta{font-size:12px;font-weight:700;border:1px solid var(--ink);border-radius:999px;padding:11px 16px;background:var(--ink);color:var(--cream)}.header-cta span{margin-left:6px}
+.menu-btn{display:none;border:0;background:transparent;font-size:24px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px;padding-top:125px;padding-bottom:78px;position:relative}
+.eyebrow,.section-label{font-size:10px;font-weight:800;letter-spacing:.22em;color:var(--brown);margin-bottom:22px}.hero h1{font-family:'Manrope';font-size:clamp(72px,7.8vw,118px);line-height:.82;letter-spacing:-.075em;margin:0 0 28px}.hero h1 span{color:var(--brown)}
+.role-line{display:flex;align-items:center;gap:8px;font-size:22px;margin-bottom:22px}.role-line strong{font-family:'Manrope';font-weight:700}.role-line b{font-weight:400;animation:blink .8s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.hero-desc{max-width:610px;font-size:16px;line-height:1.8;color:var(--muted)}.hero-actions{display:flex;align-items:center;gap:24px;margin-top:35px}.btn-primary{display:inline-flex;align-items:center;gap:14px;background:var(--ink);color:white;border-radius:999px;padding:15px 20px;font-size:13px;font-weight:700}.btn-link{font-size:13px;font-weight:700;border-bottom:1px solid var(--ink);padding-bottom:4px}.contact-mini{display:flex;flex-wrap:wrap;gap:18px;margin-top:38px;font-size:12px;color:#6d635a}.contact-mini a{border-bottom:1px solid transparent}.contact-mini a:hover{border-color:var(--brown)}
+.hero-visual{height:680px;position:relative;display:grid;place-items:center}.beige-blob{position:absolute;border-radius:50%;filter:blur(1px)}.blob-a{width:520px;height:520px;background:#e5d6c5;right:3%;top:8%}.blob-b{width:320px;height:210px;background:#c8b296;left:0;bottom:7%;border-radius:47% 53% 61% 39%/54% 35% 65% 46%;transform:rotate(-18deg)}
+.portrait-frame{position:relative;width:405px;height:570px;border-radius:210px 210px 30px 30px;overflow:hidden;background:#ded2c6;box-shadow:0 30px 80px rgba(65,49,38,.16);z-index:2;border:8px solid rgba(255,255,255,.66)}.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 32%}.portrait-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(30,22,16,.55))}.portrait-caption{position:absolute;left:24px;bottom:24px;z-index:2;color:white}.portrait-caption span{display:block;font-size:9px;letter-spacing:.18em;margin-bottom:5px;opacity:.8}.portrait-caption strong{font-family:'Manrope';font-size:20px}.float-card{position:absolute;z-index:3;background:rgba(255,253,248,.92);border:1px solid rgba(89,74,61,.15);box-shadow:0 14px 34px rgba(73,57,43,.11);backdrop-filter:blur(12px);padding:13px 16px;border-radius:16px}.float-card small{display:block;font-size:8px;letter-spacing:.16em;color:var(--brown);font-weight:800;margin-bottom:4px}.float-card strong{font-size:12px}.card-a{left:2%;top:25%}.card-b{right:0;top:42%}.card-c{left:5%;bottom:13%}.scroll-hint{position:absolute;right:0;bottom:18px;display:flex;align-items:center;gap:10px;color:#8b8178;font-size:9px;letter-spacing:.18em}.scroll-hint i{font-style:normal;font-size:18px;color:var(--ink)}
+.marquee{overflow:hidden;background:var(--ink);color:#f4eee7}.marquee-track{width:max-content;display:flex;align-items:center;gap:25px;padding:17px 0;font:700 11px 'Manrope';letter-spacing:.13em;animation:marquee 30s linear infinite}.marquee-track b{color:#c5a98c}@keyframes marquee{to{transform:translateX(-50%)}}
+.about,.skills,.experience,.projects,.contact{padding-top:130px;padding-bottom:130px}.about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:90px;align-items:center}.about-photo{position:relative}.photo-card{height:620px;border-radius:28px;overflow:hidden;border:10px solid var(--paper);box-shadow:0 24px 60px rgba(64,50,38,.11);transform:rotate(-2deg)}.photo-card img{height:100%;object-fit:cover;object-position:center 30%}.photo-note{position:absolute;right:-32px;bottom:42px;background:var(--ink);color:white;padding:16px 18px;border-radius:14px;font-size:11px;line-height:1.55;transform:rotate(3deg)}
+.kicker{font-size:13px;color:var(--brown);font-weight:700;letter-spacing:.04em}.about-content h2,.section-heading h2,.experience-title h2,.contact h2{font-family:'Manrope';font-size:clamp(48px,5.4vw,78px);line-height:1.02;letter-spacing:-.055em;margin:0}.about-content h2 span,.section-heading h2 span,.experience-title h2 span,.contact h2 span{color:var(--brown)}.about-content>p:not(.kicker){font-size:15px;line-height:1.85;color:var(--muted);max-width:720px}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px}.stat-grid article{border-top:1px solid var(--line);padding-top:16px}.stat-grid strong{display:block;font:700 34px 'Manrope';letter-spacing:-.04em}.stat-grid span{display:block;color:var(--muted);font-size:10px;margin-top:4px;line-height:1.4}
+.skills{background:var(--paper);width:100%;padding-left:max(32px,calc((100vw - var(--max))/2));padding-right:max(32px,calc((100vw - var(--max))/2))}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:80px;margin-bottom:60px}.section-heading>p{max-width:430px;color:var(--muted);line-height:1.75;font-size:14px}.skill-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.skill-card{display:grid;grid-template-columns:38px 1fr 30px;gap:16px;padding:28px 22px 28px 0;border-bottom:1px solid var(--line);position:relative;transition:.3s}.skill-card:nth-child(odd){border-right:1px solid var(--line);padding-right:34px}.skill-card:nth-child(even){padding-left:34px}.skill-card:hover{background:#f3ede4}.skill-card>span{font-size:9px;color:#9b8e81;padding-top:6px}.skill-card h3{font:700 22px 'Manrope';margin:0 0 8px;letter-spacing:-.025em}.skill-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.skill-card i{font-style:normal;color:var(--brown);font-size:20px;transition:.25s}.skill-card:hover i{transform:translate(3px,-3px)}
+.experience{position:relative}.experience-title{display:grid;grid-template-columns:130px 1fr;align-items:start;margin-bottom:68px}.glow-dot{width:52px;height:52px;border-radius:50%;background:#d9c3aa;box-shadow:0 0 32px rgba(164,126,91,.45);margin-top:8px}.career-board{position:relative}.career-board:before{content:"";position:absolute;left:50%;top:5px;bottom:5px;width:1px;background:linear-gradient(#b29c85,#d6cbc0,#b29c85)}.career-item{display:grid;grid-template-columns:1fr 230px 1.15fr;gap:70px;align-items:start;padding:28px 0 50px}.career-role h3{font:700 28px 'Manrope';margin:0;line-height:1.05}.career-role p{margin:8px 0 0;color:var(--brown);font-weight:700}.career-time{font:600 42px 'Manrope';letter-spacing:-.045em;text-align:center}.career-desc{color:var(--muted);font-size:13px;line-height:1.7;padding-top:7px}.career-item.muted{opacity:.5}.experience-note,.project-note{font-size:10px;color:#92877d;margin-top:12px}
+.project-showcase{display:grid;grid-template-columns:1fr 1fr;gap:22px}.project-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;overflow:hidden;transition:.3s}.project-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(65,49,38,.12)}.project-main,.project-card.wide{grid-column:1/-1}.project-visual{height:360px;position:relative;overflow:hidden}.project-main .project-visual,.project-card.wide .project-visual{height:430px}.project-index{position:absolute;right:22px;top:19px;font:700 9px 'Manrope';letter-spacing:.15em;color:rgba(40,32,25,.45)}.performance-art{background:linear-gradient(135deg,#e7ded3,#cbb79f)}.chart-lines{position:absolute;left:8%;right:8%;bottom:15%;height:56%;display:flex;align-items:end;gap:22px}.chart-lines i{flex:1;background:#6f5b48;border-radius:10px 10px 0 0;opacity:.8}.chart-lines i:nth-child(1){height:28%}.chart-lines i:nth-child(2){height:44%}.chart-lines i:nth-child(3){height:36%}.chart-lines i:nth-child(4){height:68%}.chart-lines i:nth-child(5){height:92%}.metric-card{position:absolute;z-index:2;background:rgba(255,255,255,.78);border:1px solid rgba(67,54,43,.12);padding:13px 15px;border-radius:15px;backdrop-filter:blur(10px)}.metric-card small{display:block;font-size:8px;letter-spacing:.15em}.metric-card strong{font:800 26px 'Manrope'}.m1{left:8%;top:12%}.m2{right:12%;top:27%}.content-art{background:var(--ink);display:grid;place-items:center;color:white}.word-stack{display:grid;transform:rotate(-5deg)}.word-stack b{font:800 60px/0.84 'Manrope';letter-spacing:-.065em}.word-stack b:nth-child(2){color:#d2b697;margin-left:28px}.word-stack b:nth-child(3){color:#f0e4d4;margin-left:55px}.content-art .project-index{color:rgba(255,255,255,.45)}.ai-art img{width:100%;height:100%;object-fit:cover;object-position:center 28%}.ai-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,22,17,.78),transparent 65%)}.ai-overlay{position:absolute;left:28px;bottom:28px;z-index:2;color:white}.ai-overlay span{font:800 56px/1 'Manrope';color:#e8d5bf}.ai-overlay b{display:block;font:700 20px/1.1 'Manrope';letter-spacing:.05em}.campaign-art{background:linear-gradient(120deg,#f0e8de,#c9b39b);display:grid;place-items:center}.campaign-copy{display:flex;align-items:center;gap:18px;font:800 clamp(30px,5vw,70px) 'Manrope';letter-spacing:-.06em}.campaign-copy strong{color:var(--brown);font-weight:400}.project-copy{padding:24px 25px 26px}.project-copy small{font-size:9px;letter-spacing:.16em;color:var(--brown);font-weight:800}.project-copy h3{font:700 25px 'Manrope';letter-spacing:-.03em;margin:8px 0 10px}.project-copy p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag-row span{font-size:9px;border:1px solid var(--line);border-radius:999px;padding:6px 9px;color:#75695e}
+.contact{width:100%;background:var(--ink);color:#f7f0e7;padding-left:max(32px,calc((100vw - var(--max))/2));padding-right:max(32px,calc((100vw - var(--max))/2))}.contact-card>p{font-size:13px;color:#b9aea3}.contact h2 span{color:#d8bfa4}.contact-links{margin-top:55px;border-top:1px solid rgba(255,255,255,.15)}.contact-links a{display:grid;grid-template-columns:150px 1fr 40px;align-items:center;gap:20px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.15)}.contact-links small{font-size:9px;letter-spacing:.18em;color:#aa9e93}.contact-links strong{font:600 20px 'Manrope'}.contact-links i{font-style:normal;font-size:22px;color:#d7bea3;transition:.2s}.contact-links a:hover i{transform:translate(4px,-4px)}
+footer{width:min(var(--max),calc(100% - 64px));height:110px;margin:auto;display:flex;align-items:center;justify-content:space-between;color:#786e65;font-size:11px}.footer-logo{transform:scale(.85);transform-origin:left center}.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:none}.delay-1{transition-delay:.12s}
+@media(max-width:980px){.nav,.header-cta{display:none}.menu-btn{display:block;margin-left:auto}.nav.mobile-open{display:flex;position:absolute;top:84px;left:18px;right:18px;flex-direction:column;background:var(--paper);padding:24px;border:1px solid var(--line);border-radius:18px}.hero{grid-template-columns:1fr;gap:20px;padding-top:125px}.hero-visual{height:560px}.portrait-frame{height:500px;width:350px}.about-grid{grid-template-columns:1fr;gap:60px}.photo-card{height:720px}.photo-note{right:20px}.stat-grid{grid-template-columns:repeat(2,1fr)}.section-heading{flex-direction:column;align-items:flex-start}.skill-grid{grid-template-columns:1fr}.skill-card:nth-child(odd){border-right:0;padding-right:22px}.skill-card:nth-child(even){padding-left:0}.career-item{grid-template-columns:1fr 150px 1.2fr;gap:30px}.project-showcase{grid-template-columns:1fr}.project-main,.project-card.wide{grid-column:auto}.campaign-copy{flex-wrap:wrap;justify-content:center}.cursor-dot{display:none}}
+@media(max-width:650px){.section,footer{width:min(var(--max),calc(100% - 32px))}.header{height:72px;padding:0 16px}.logo{width:68px;height:40px;font-size:18px}.hero{padding-top:105px}.hero h1{font-size:62px}.hero-visual{height:460px}.portrait-frame{width:280px;height:410px;border-width:6px}.blob-a{width:340px;height:340px}.blob-b{width:220px;height:150px}.float-card{padding:10px 12px}.card-a{left:0}.card-b{right:0}.card-c{left:3%}.scroll-hint{display:none}.about,.skills,.experience,.projects,.contact{padding-top:90px;padding-bottom:90px}.photo-card{height:520px}.about-content h2,.section-heading h2,.experience-title h2,.contact h2{font-size:44px}.stat-grid{grid-template-columns:1fr 1fr}.experience-title{grid-template-columns:60px 1fr}.glow-dot{width:34px;height:34px}.career-board:before{left:34%}.career-item{grid-template-columns:1fr .62fr;gap:18px;padding-bottom:38px}.career-desc{grid-column:1/-1}.career-role h3{font-size:21px}.career-time{font-size:28px}.project-visual,.project-main .project-visual,.project-card.wide .project-visual{height:310px}.word-stack b{font-size:45px}.campaign-copy{font-size:34px}.contact-links a{grid-template-columns:1fr 30px}.contact-links small{grid-column:1/-1}.contact-links strong{font-size:15px;overflow-wrap:anywhere}footer{height:auto;padding:24px 0;gap:16px;flex-wrap:wrap}.footer-logo{display:none}}
+
+
+/* ===== Hero redesign V4 ===== */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:64px;padding-top:126px;padding-bottom:88px;position:relative}
+.hero-copy{position:relative;z-index:2}
+.hero h1{margin-bottom:22px}
+.role-line{display:flex;align-items:center;gap:10px;font-size:22px;margin-bottom:18px;flex-wrap:wrap}
+.role-line span{color:var(--muted)}
+.role-line strong{font-family:'Manrope';font-weight:700;background:linear-gradient(90deg,var(--ink),var(--brown));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-desc{max-width:620px;font-size:16px;line-height:1.9;color:var(--muted);margin-top:0}
+.hero-desc strong{color:var(--brown-dark)}
+.impact-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px;max-width:650px}
+.impact-strip article{padding:16px 14px;background:rgba(255,253,248,.78);border:1px solid rgba(134,109,85,.15);border-radius:18px;box-shadow:0 12px 26px rgba(93,71,53,.06)}
+.impact-strip strong{display:block;font:800 28px 'Manrope';line-height:1;color:var(--ink);margin-bottom:6px;letter-spacing:-.05em}
+.impact-strip span{display:block;font-size:11px;line-height:1.45;color:var(--muted)}
+.hero-actions{margin-top:30px}
+.contact-mini{margin-top:30px}
+.hero-visual{height:auto;min-height:690px;display:flex;align-items:center;justify-content:center}
+.hero-stage{position:relative;width:min(100%,580px);height:690px}
+.stage-glow{position:absolute;border-radius:50%;filter:blur(4px);opacity:.9}
+.glow-1{width:300px;height:300px;right:20px;top:20px;background:radial-gradient(circle,#ead8c4 0%,rgba(234,216,196,.2) 70%,transparent 100%)}
+.glow-2{width:220px;height:220px;left:20px;bottom:100px;background:radial-gradient(circle,#cfb59b 0%,rgba(207,181,155,.18) 72%,transparent 100%)}
+.stage-grid{position:absolute;inset:70px 28px 36px 28px;border-radius:32px;background-image:linear-gradient(rgba(134,109,85,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(134,109,85,.12) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.35));opacity:.55}
+.hero-main-card{position:absolute;right:38px;top:26px;width:390px;height:540px;border-radius:42px;overflow:hidden;border:12px solid rgba(255,255,255,.72);box-shadow:0 30px 80px rgba(92,69,52,.18);z-index:3;background:#e6d7c6}
+.hero-main-card img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero-main-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 30%,rgba(36,26,18,.56) 100%)}
+.main-overlay{position:absolute;left:24px;bottom:24px;z-index:2;color:#fff}
+.main-overlay span{display:block;font-size:10px;font-weight:700;letter-spacing:.22em;opacity:.86;margin-bottom:8px}
+.main-overlay strong{font:700 24px 'Manrope';line-height:1.1;letter-spacing:-.03em}
+.hero-mini-card{position:absolute;left:12px;bottom:62px;width:220px;height:280px;border-radius:26px;overflow:hidden;border:10px solid rgba(255,255,255,.78);box-shadow:0 20px 54px rgba(92,69,52,.14);z-index:4;background:#efdfce;transform:rotate(-6deg)}
+.hero-mini-card img{width:100%;height:100%;object-fit:cover;object-position:center 10%}
+.hero-analytics{position:absolute;right:0;bottom:20px;width:280px;padding:18px 18px 16px;background:rgba(255,251,245,.92);border:1px solid rgba(134,109,85,.18);border-radius:24px;box-shadow:0 18px 48px rgba(92,69,52,.11);backdrop-filter:blur(10px);z-index:5}
+.analytics-head span{display:block;font-size:10px;letter-spacing:.18em;color:var(--brown);font-weight:800;margin-bottom:6px}
+.analytics-head strong{display:block;font:700 18px 'Manrope';line-height:1.2;letter-spacing:-.03em;color:var(--ink)}
+.analytics-bars{display:flex;align-items:flex-end;gap:10px;height:110px;margin:18px 0 14px;padding:0 4px}
+.analytics-bars i{display:block;flex:1;border-radius:14px 14px 5px 5px;background:linear-gradient(180deg,#ccb59a,#8f7258)}
+.analytics-legend{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+.hero-chip,.hero-kpi{position:absolute;z-index:6;background:rgba(255,253,248,.94);border:1px solid rgba(134,109,85,.18);box-shadow:0 14px 34px rgba(73,57,43,.10);backdrop-filter:blur(12px)}
+.hero-chip{padding:11px 16px;border-radius:999px;font-size:12px;font-weight:700;color:var(--brown-dark)}
+.chip-a{left:0;top:92px}
+.chip-b{right:8px;top:156px}
+.chip-c{left:130px;bottom:8px}
+.hero-kpi{padding:12px 14px 13px;border-radius:16px;min-width:124px}
+.hero-kpi small{display:block;font-size:9px;letter-spacing:.18em;color:var(--brown);font-weight:800;margin-bottom:5px}
+.hero-kpi strong{display:block;font:700 16px 'Manrope';line-height:1.1}
+.kpi-a{left:34px;top:238px}
+.kpi-b{right:24px;top:426px}
+.scroll-hint{bottom:26px}
+@media(max-width:1100px){.hero{grid-template-columns:1fr;gap:36px;padding-top:112px}.hero-visual{min-height:620px}.hero-stage{height:620px;margin:0 auto}.impact-strip{max-width:none}}
+@media(max-width:780px){.impact-strip{grid-template-columns:repeat(2,1fr)}.hero-stage{width:100%;height:600px}.hero-main-card{right:20px;width:min(72vw,360px);height:500px}.hero-mini-card{left:8px;width:min(38vw,190px);height:250px}.hero-analytics{right:8px;width:min(58vw,260px)}.chip-b{right:0}.kpi-b{right:12px}.scroll-hint{display:none}}
+@media(max-width:560px){.hero{padding-top:104px;padding-bottom:60px}.role-line{font-size:18px}.hero-desc{font-size:14px;line-height:1.8}.impact-strip{grid-template-columns:1fr 1fr;gap:10px}.impact-strip article{padding:14px 12px}.impact-strip strong{font-size:24px}.hero-visual{min-height:540px}.hero-stage{height:540px}.stage-grid{inset:44px 12px 26px 12px}.hero-main-card{position:relative;right:auto;top:auto;margin:0 0 0 auto;width:min(74vw,300px);height:410px;border-width:8px}.hero-mini-card{left:0;bottom:92px;width:138px;height:188px;border-width:7px}.hero-analytics{width:200px;padding:14px 14px 12px;bottom:18px}.analytics-head strong{font-size:15px}.analytics-bars{height:80px;gap:7px;margin:14px 0 10px}.hero-chip{font-size:10px;padding:9px 12px}.chip-a{top:24px;left:0}.chip-b{top:72px;right:0}.chip-c{left:88px;bottom:0}.hero-kpi{min-width:98px;padding:10px 12px}.hero-kpi strong{font-size:14px}.kpi-a{left:10px;top:160px}.kpi-b{right:6px;top:320px}}
+
+
+/* ===== Typography refinement V5 ===== */
+body{letter-spacing:0}
+.hero h1{font-size:clamp(58px,6.1vw,92px)!important;line-height:.92!important;letter-spacing:-.06em!important;margin:0 0 18px!important}
+.hero h1 span{color:#6c5a4b!important}
+.eyebrow,.section-label{font-size:9px!important;letter-spacing:.24em!important;color:#8c7764!important}
+.role-line{font-size:18px!important;gap:8px!important;margin-bottom:16px!important}
+.role-line span{font-weight:500!important;color:#887c71!important}
+.role-line strong{font-size:20px!important;font-weight:700!important;background:none!important;color:#3d342d!important}
+.hero-desc{font-size:15px!important;line-height:1.92!important;color:#7a7067!important;max-width:600px!important}
+.hero-desc strong{color:#5c4d41!important;font-weight:700!important}
+.impact-strip{gap:10px!important;margin-top:24px!important;max-width:620px!important}
+.impact-strip article{padding:14px 14px 13px!important;border-radius:16px!important;background:rgba(255,252,248,.82)!important}
+.impact-strip strong{font-size:24px!important;margin-bottom:4px!important;color:#43372d!important}
+.impact-strip span{font-size:10px!important;color:#857a70!important}
+.btn-primary{padding:14px 18px!important;font-size:12px!important}
+.btn-link{font-size:12px!important;color:#56483d!important}
+.contact-mini{gap:16px!important;margin-top:26px!important;font-size:11px!important;color:#80756b!important}
+.main-overlay span{font-size:9px!important;letter-spacing:.18em!important;margin-bottom:6px!important}
+.main-overlay strong{font-size:20px!important;line-height:1.18!important;letter-spacing:-.02em!important}
+.analytics-head span{font-size:9px!important}
+.analytics-head strong{font-size:16px!important;line-height:1.25!important}
+.hero-chip{font-size:11px!important;padding:10px 14px!important;color:#5e4e41!important}
+.hero-kpi strong{font-size:15px!important}
+.hero-kpi small{font-size:8px!important}
+.scroll-hint{font-size:8px!important;color:#91857a!important}
+.about-content h2,.section-heading h2,.experience-title h2,.contact h2{font-size:clamp(38px,4.5vw,62px)!important;line-height:1.08!important;letter-spacing:-.045em!important}
+.about-content h2 span,.section-heading h2 span,.experience-title h2 span,.contact h2 span{color:#786454!important}
+.kicker{font-size:12px!important;color:#8a7460!important;letter-spacing:.03em!important}
+.about-content>p:not(.kicker),.section-heading>p,.career-desc,.project-copy p{font-size:14px!important;line-height:1.85!important;color:#7c7269!important}
+.stat-grid strong{font-size:28px!important}
+.stat-grid span{font-size:10px!important}
+.skill-card h3{font-size:20px!important;line-height:1.25!important;margin:0 0 6px!important}
+.skill-card p{font-size:12px!important;line-height:1.72!important}
+.career-role h3{font-size:24px!important;line-height:1.1!important}
+.career-time{font-size:34px!important}
+.project-copy h3{font-size:24px!important;line-height:1.2!important;letter-spacing:-.03em!important}
+.project-copy small,.project-type{font-size:10px!important;letter-spacing:.14em!important;color:#917f70!important}
+.tag-row span,.project-tags span{font-size:10px!important}
+@media(max-width:1100px){
+  .hero h1{font-size:clamp(54px,10vw,78px)!important}
+}
+@media(max-width:560px){
+  .hero h1{font-size:52px!important;line-height:.95!important}
+  .role-line{font-size:16px!important}
+  .role-line strong{font-size:17px!important}
+  .hero-desc{font-size:14px!important;line-height:1.85!important}
+  .about-content h2,.section-heading h2,.experience-title h2,.contact h2{font-size:34px!important;line-height:1.12!important}
+  .career-time{font-size:30px!important}
+}
+
+
+/* ===== Render safety V6 ===== */
+.reveal{opacity:1!important;transform:none!important}
+.hero-copy{animation:heroFade .75s ease both}
+.hero-visual{animation:heroFade .9s .08s ease both}
+@keyframes heroFade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ===== Experience V7 ===== */
+.experience-title{grid-template-columns:110px 1fr!important;gap:0}
+.experience-title .section-label{margin-bottom:16px}
+.career-board:before{left:46.5%!important}
+.career-item{grid-template-columns:.88fr 180px 1.32fr!important;gap:48px!important;padding:34px 0 42px!important;border-bottom:1px solid rgba(134,109,85,.14)}
+.career-role h3{font-size:23px!important;line-height:1.18!important;max-width:330px}
+.career-role p{font-size:12px!important;line-height:1.55!important;margin-top:9px!important;max-width:340px}
+.career-time{display:flex;flex-direction:column;align-items:center;gap:3px;font-family:'Manrope';text-align:center!important;line-height:1.1!important;padding-top:2px}
+.career-time span{font-size:20px;font-weight:700;letter-spacing:-.03em;color:#3d342d}
+.career-time b{font-size:11px;font-weight:700;letter-spacing:.06em;color:#9a8776}
+.career-desc{padding-top:0!important}
+.career-desc p{margin:0 0 12px;font-size:13px;line-height:1.78;color:#766d64}
+.career-desc strong{font-weight:700;color:#55463a}
+.career-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.career-tags span{font-size:9px;font-weight:700;letter-spacing:.03em;color:#6e5b4b;border:1px solid #d8cec2;background:rgba(255,253,248,.72);padding:7px 9px;border-radius:999px}
+@media(max-width:980px){.career-board:before{left:36%!important}.career-item{grid-template-columns:1fr 140px 1.25fr!important;gap:28px!important}}
+@media(max-width:650px){.experience-title{grid-template-columns:48px 1fr!important}.career-board:before{display:none}.career-item{grid-template-columns:1fr!important;gap:12px!important;padding:28px 0 32px!important}.career-time{align-items:flex-start!important;flex-direction:row!important;gap:6px!important}.career-time span{font-size:17px!important}.career-time b{font-size:10px!important;padding-top:4px}.career-desc{grid-column:auto!important}.career-role h3{font-size:20px!important}.career-role p{font-size:11px!important}}
+
+
+/* ===== BMC V9: premium motion & 3D ===== */
+:root{--ease-premium:cubic-bezier(.2,.75,.25,1)}
+body{background:radial-gradient(circle at 75% 12%,rgba(210,191,169,.25),transparent 28%),var(--bg)}
+.header{transition:background .35s ease,box-shadow .35s ease,transform .35s ease}
+.header.scrolled{background:rgba(247,243,237,.94);box-shadow:0 12px 35px rgba(76,59,46,.08)}
+.logo{transition:transform .35s var(--ease-premium),box-shadow .35s ease}
+.logo:hover{transform:translateY(-2px) rotate(-2deg);box-shadow:0 10px 28px rgba(75,57,43,.12)}
+.header-cta{transition:transform .3s var(--ease-premium),box-shadow .3s ease,background .3s ease}
+.header-cta:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(32,27,23,.16);background:#3b332d}
+.hero{isolation:isolate;--spot-x:75%;--spot-y:35%}
+.hero:before{content:'';position:absolute;inset:82px -8vw 0 40%;z-index:-1;background:radial-gradient(circle 260px at var(--spot-x) var(--spot-y),rgba(255,255,255,.92),rgba(222,205,186,.32) 38%,transparent 72%);pointer-events:none;transition:opacity .25s ease}
+.hero-copy>*{will-change:transform,opacity}
+.motion-ready .hero-copy .eyebrow{animation:heroIn .7s .05s both}
+.motion-ready .hero-copy h1{animation:heroIn .8s .12s both}
+.motion-ready .hero-copy .role-line{animation:heroIn .8s .2s both}
+.motion-ready .hero-copy .hero-desc{animation:heroIn .8s .28s both}
+.motion-ready .hero-copy .impact-strip{animation:heroIn .8s .36s both}
+.motion-ready .hero-copy .hero-actions{animation:heroIn .8s .44s both}
+.motion-ready .hero-copy .contact-mini{animation:heroIn .8s .52s both}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero-stage{perspective:1200px;transform-style:preserve-3d}
+.stage-grid{animation:gridDrift 14s ease-in-out infinite alternate;transform-origin:center}
+@keyframes gridDrift{to{transform:translate3d(8px,-10px,0) scale(1.025);opacity:.72}}
+.stage-glow{animation:glowPulse 7s ease-in-out infinite alternate}
+.glow-2{animation-delay:-3.4s}
+@keyframes glowPulse{0%{transform:scale(.92);opacity:.58}100%{transform:scale(1.12);opacity:.95}}
+.growth-orbit{position:absolute;left:32px;top:68px;width:150px;height:150px;z-index:2;transform-style:preserve-3d;animation:orbitBob 6s ease-in-out infinite;filter:drop-shadow(0 22px 28px rgba(104,80,59,.12))}
+.orbit-ring{position:absolute;inset:16px;border:1.5px solid rgba(112,88,67,.48);border-radius:50%;transform-style:preserve-3d}
+.ring-x{transform:rotateX(68deg);animation:ringX 9s linear infinite}
+.ring-y{transform:rotateY(68deg);animation:ringY 10s linear infinite reverse}
+.ring-z{inset:30px;border-color:rgba(173,140,107,.72);animation:ringZ 12s linear infinite}
+.orbit-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) translateZ(20px);width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#fffaf3,#cdb79e);box-shadow:inset -10px -12px 22px rgba(111,84,61,.18),inset 8px 8px 18px rgba(255,255,255,.88),0 15px 30px rgba(73,55,41,.14);font:800 9px 'Manrope';letter-spacing:.14em;color:#58483b}
+@keyframes ringX{to{transform:rotateX(68deg) rotateZ(360deg)}}
+@keyframes ringY{to{transform:rotateY(68deg) rotateZ(360deg)}}
+@keyframes ringZ{to{transform:rotate(360deg)}}
+@keyframes orbitBob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
+.tilt-3d,.tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform .18s ease-out,box-shadow .35s ease}
+.hero-main-card{box-shadow:0 34px 90px rgba(92,69,52,.18),0 8px 24px rgba(92,69,52,.08);transition:transform .18s ease-out,box-shadow .4s ease}
+.hero-main-card:hover{box-shadow:0 44px 110px rgba(92,69,52,.25),0 10px 30px rgba(92,69,52,.10)}
+.hero-main-card img{transform:scale(1.025);transition:transform 1s var(--ease-premium),filter .6s ease}
+.hero-main-card:hover img{transform:scale(1.07);filter:saturate(1.04) contrast(1.02)}
+.main-overlay{transform:translateZ(45px)}
+.hero-mini-card{animation:miniFloat 5.8s ease-in-out infinite;transform-origin:center}
+@keyframes miniFloat{0%,100%{margin-top:0}50%{margin-top:-10px}}
+.hero-analytics{animation:analyticsFloat 6.8s 1s ease-in-out infinite}
+@keyframes analyticsFloat{0%,100%{margin-bottom:0}50%{margin-bottom:8px}}
+.analytics-bars i{transform-origin:bottom;animation:barBreath 3.4s ease-in-out infinite alternate}
+.analytics-bars i:nth-child(2){animation-delay:-.6s}.analytics-bars i:nth-child(3){animation-delay:-1.1s}.analytics-bars i:nth-child(4){animation-delay:-1.7s}.analytics-bars i:nth-child(5){animation-delay:-2.2s}
+@keyframes barBreath{from{filter:saturate(.85);transform:scaleY(.88)}to{filter:saturate(1.15);transform:scaleY(1)}}
+.hero-chip,.hero-kpi{transition:transform .25s var(--ease-premium),box-shadow .3s ease}
+.hero-chip:hover,.hero-kpi:hover{transform:translateY(-5px) scale(1.025)!important;box-shadow:0 20px 42px rgba(73,57,43,.14)}
+.impact-strip article{transition:transform .35s var(--ease-premium),background .35s ease,box-shadow .35s ease}
+.impact-strip article:hover{transform:translateY(-6px);background:#fffdfa!important;box-shadow:0 18px 38px rgba(89,68,51,.10)}
+.btn-primary{position:relative;overflow:hidden;transition:transform .3s var(--ease-premium),box-shadow .3s ease}
+.btn-primary:after{content:'';position:absolute;top:-60%;left:-45%;width:36%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);transform:rotate(18deg);transition:left .6s ease}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(40,31,24,.18)}
+.btn-primary:hover:after{left:120%}
+.marquee{position:relative}.marquee:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--ink),transparent 8%,transparent 92%,var(--ink));pointer-events:none}
+.motion-ready .reveal{opacity:0!important;transform:translateY(28px)!important;transition:opacity .85s var(--ease-premium),transform .85s var(--ease-premium)}
+.motion-ready .reveal.visible{opacity:1!important;transform:none!important}
+.photo-card{transition:transform .6s var(--ease-premium),box-shadow .6s ease;transform-style:preserve-3d}
+.about-photo:hover .photo-card{transform:rotate(-1deg) translateY(-7px) rotateY(3deg);box-shadow:0 34px 80px rgba(64,50,38,.16)}
+.photo-note{transition:transform .5s var(--ease-premium)}
+.about-photo:hover .photo-note{transform:rotate(1deg) translateY(-8px)}
+.skill-card{overflow:hidden;isolation:isolate}
+.skill-card:before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 25%,rgba(215,195,170,.22),transparent 72%);transform:translateX(-110%);transition:transform .8s var(--ease-premium);z-index:-1}
+.skill-card:hover:before{transform:translateX(110%)}
+.skill-card:hover{transform:translateX(6px);background:#f8f3ec}
+.glow-dot{animation:dotPulse 3s ease-in-out infinite}
+@keyframes dotPulse{50%{transform:scale(1.12);box-shadow:0 0 52px rgba(164,126,91,.55)}}
+.motion-ready .career-board:before{transform:scaleY(0);transform-origin:top;transition:transform 1.4s var(--ease-premium)}
+.motion-ready .career-board.timeline-live:before{transform:scaleY(1)}
+.career-item{transition:opacity .4s ease,transform .5s var(--ease-premium),background .35s ease}
+.career-item:hover{transform:translateX(8px);background:linear-gradient(90deg,rgba(255,253,248,.42),transparent 88%)}
+.project-card{perspective:1100px;box-shadow:0 8px 28px rgba(65,49,38,.05)}
+.project-card:hover{box-shadow:0 30px 72px rgba(65,49,38,.16)}
+.project-visual{transform:translateZ(16px)}
+.project-copy{position:relative;z-index:3;transform:translateZ(28px);background:rgba(251,250,247,.96)}
+.chart-lines i{animation:chartGrow 2.4s ease-in-out infinite alternate;transform-origin:bottom}
+.chart-lines i:nth-child(2){animation-delay:-.4s}.chart-lines i:nth-child(3){animation-delay:-.8s}.chart-lines i:nth-child(4){animation-delay:-1.2s}.chart-lines i:nth-child(5){animation-delay:-1.6s}
+@keyframes chartGrow{to{filter:brightness(1.16);transform:scaleY(.94)}}
+.metric-card{animation:kpiDrift 5s ease-in-out infinite}.m2{animation-delay:-2.4s}
+@keyframes kpiDrift{50%{transform:translateY(-8px) rotate(1deg)}}
+.word-stack{animation:wordFloat 6s ease-in-out infinite}
+@keyframes wordFloat{50%{transform:rotate(-3deg) translateY(-10px)}}
+.ai-art img{transition:transform 1s var(--ease-premium)}
+.project-card:hover .ai-art img{transform:scale(1.07)}
+.contact-links a{transition:transform .35s var(--ease-premium),background .35s ease,padding .35s ease}
+.contact-links a:hover{transform:translateX(8px);background:rgba(255,253,248,.46);padding-left:14px;padding-right:14px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.motion-ready .reveal{opacity:1!important;transform:none!important}}
+@media(max-width:980px){.growth-orbit{left:12%;top:56px}.hero:before{display:none}.tilt-3d,.tilt-card{transform:none!important}.hero-mini-card,.hero-analytics{animation:none}}
+@media(max-width:560px){.growth-orbit{width:110px;height:110px;left:0;top:58px}.orbit-core{width:52px;height:52px;font-size:7px}.hero-chip{display:none}.hero-kpi{display:none}}
+
+
+/* ===== BMC V10 · MARKETING EDITORIAL LAB ===== */
+:root{--champagne:#cdb79d;--espresso:#2d251f;--soft-gold:#b99778;--ivory:#fffaf2}
+html{scrollbar-color:#a98b70 #efe9e1}
+body{background:linear-gradient(180deg,#f5f1ea 0%,#f2eee8 48%,#ece3d8 100%)}
+.ambient-noise{position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.032;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E")}
+.page-progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#4c3c31,#b99778,#e5d2bd);z-index:1000;box-shadow:0 0 18px rgba(185,151,120,.34)}
+.preloader{position:fixed;inset:0;z-index:1200;background:#1f1a16;color:#f8f1e8;display:grid;place-items:center;transition:opacity .8s var(--ease-premium),visibility .8s}
+.preloader.done{opacity:0;visibility:hidden}
+.preloader-inner{display:grid;justify-items:center;gap:10px}.preloader-inner span{font:800 clamp(58px,9vw,120px) 'Manrope';letter-spacing:-.08em}.preloader-inner small{font:700 10px 'Manrope';letter-spacing:.34em;color:#bda68f}.preloader-inner i{display:block;width:180px;height:1px;background:#4b4037;overflow:hidden;position:relative}.preloader-inner i:after{content:'';position:absolute;inset:0;background:#f1dfcc;transform:translateX(-100%);animation:loadSweep 1.25s ease forwards}@keyframes loadSweep{to{transform:none}}
+.hero{overflow:visible}.hero-ghost-word{position:absolute;left:47%;top:44%;transform:translate(-50%,-50%) rotate(-90deg);font:800 clamp(90px,12vw,190px) 'Manrope';letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(101,81,65,.09);white-space:nowrap;z-index:-1;pointer-events:none}
+.hero-copy{position:relative}.hero-copy:before{content:'01 / PORTFOLIO';position:absolute;left:-40px;top:0;writing-mode:vertical-rl;transform:rotate(180deg);font:700 9px 'Manrope';letter-spacing:.25em;color:#a59383}
+.hero h1{max-width:640px}.hero h1 span{position:relative;display:inline-block}.hero h1 span:after{content:'';position:absolute;left:3%;right:-7%;bottom:5px;height:12px;background:rgba(201,177,153,.28);z-index:-1;transform:skewX(-10deg) scaleX(0);transform-origin:left;animation:underlineGrow 1.2s .9s var(--ease-premium) forwards}@keyframes underlineGrow{to{transform:skewX(-10deg) scaleX(1)}}
+.role-line strong{position:relative}.role-line strong:after{content:' ';display:inline-block;width:5px;height:5px;margin-left:8px;border-radius:50%;background:#9f7e63;vertical-align:middle;box-shadow:0 0 0 5px rgba(159,126,99,.11);animation:pulseDot 2.4s ease-in-out infinite}@keyframes pulseDot{50%{box-shadow:0 0 0 10px rgba(159,126,99,0)}}
+.hero-stage{filter:drop-shadow(0 25px 40px rgba(74,54,39,.06))}.hero-main-card{border-radius:42px 42px 20px 20px!important;transform-origin:center center}.hero-main-card:before{content:'BMC / 2026';position:absolute;right:14px;top:18px;z-index:4;font:700 8px 'Manrope';letter-spacing:.2em;color:#fff;writing-mode:vertical-rl}.hero-main-card:after{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(37,27,20,.08) 45%,rgba(37,27,20,.66))!important}
+.hero-main-card img{filter:saturate(.88) sepia(.05)}
+.strategy-compass{position:absolute;right:-8px;top:30px;width:170px;height:170px;z-index:2;transform-style:preserve-3d;perspective:700px;animation:compassFloat 7s ease-in-out infinite}.compass-ring{position:absolute;inset:0;border:1px solid rgba(117,91,70,.32);border-radius:50%;transform-style:preserve-3d}.compass-ring.ring-1{animation:compassSpin 15s linear infinite}.compass-ring.ring-1 span{position:absolute;font:700 7px 'Manrope';letter-spacing:.16em;color:#6f5948}.compass-ring.ring-1 span:nth-child(1){left:50%;top:-8px;transform:translateX(-50%)}.compass-ring.ring-1 span:nth-child(2){right:-24px;top:48%;transform:rotate(90deg)}.compass-ring.ring-1 span:nth-child(3){left:50%;bottom:-9px;transform:translateX(-50%) rotate(180deg)}.compass-ring.ring-1 span:nth-child(4){left:-16px;top:46%;transform:rotate(-90deg)}.compass-ring.ring-2{inset:28px;border-style:dashed;animation:compassSpin 10s linear infinite reverse}.compass-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) translateZ(28px);width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#fffaf1,#bfa387);box-shadow:inset -8px -10px 20px rgba(80,59,43,.18),0 14px 30px rgba(80,59,43,.16);font:800 10px 'Manrope';letter-spacing:.08em;color:#48392e}@keyframes compassSpin{to{transform:rotate(360deg)}}@keyframes compassFloat{50%{transform:translateY(-10px) rotateX(8deg)}}
+.growth-orbit{left:8px!important;top:44px!important;transform:scale(.78);opacity:.7}.hero-mini-card{box-shadow:0 20px 50px rgba(80,59,43,.14),inset 0 0 0 1px rgba(255,255,255,.8)}
+.hero-analytics{border-radius:22px!important;background:rgba(255,250,244,.84)!important}.analytics-bars i{background:linear-gradient(180deg,#d7c1aa,#8a6a52)!important}
+.impact-strip article{position:relative;overflow:hidden}.impact-strip article:after{content:'';position:absolute;inset:auto -30% -60% auto;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(195,164,135,.25),transparent 70%);transition:.4s}.impact-strip article:hover:after{transform:scale(1.5)}
+.process-band{width:min(1180px,calc(100% - 48px));margin:0 auto 40px;padding:22px 26px;border:1px solid rgba(126,103,83,.16);border-radius:24px;background:rgba(255,252,247,.62);backdrop-filter:blur(14px);display:flex;align-items:center;gap:30px;box-shadow:0 20px 50px rgba(84,62,45,.05)}.process-label{font:800 9px 'Manrope';letter-spacing:.22em;color:#8d7764;white-space:nowrap}.process-flow{display:flex;align-items:center;justify-content:space-between;gap:18px;flex:1;font:700 11px 'Manrope';color:#4f4339}.process-flow i{font-style:normal;color:#b39880}.process-flow span{position:relative}.process-flow span:after{content:'';position:absolute;left:0;right:100%;bottom:-5px;height:1px;background:#9d8067;transition:.35s}.process-flow span:hover:after{right:0}
+.about{position:relative;isolation:isolate}.section-watermark{position:absolute;left:-4vw;top:9%;font:800 clamp(80px,12vw,180px) 'Manrope';letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(112,89,70,.055);white-space:nowrap;z-index:-1;transform:rotate(-6deg)}.photo-card{transform:rotate(-2.5deg) translateZ(0);transition:transform .55s var(--ease-premium),box-shadow .55s ease}.about-photo:hover .photo-card{transform:rotate(1.2deg) translateY(-10px) scale(1.01);box-shadow:0 38px 80px rgba(64,50,38,.16)}.photo-note{transition:transform .5s var(--ease-premium)}.about-photo:hover .photo-note{transform:rotate(-2deg) translate(-10px,-8px)}
+.skills{position:relative;overflow:hidden}.skill-ribbon{position:absolute;right:-70px;top:70px;display:grid;gap:6px;transform:rotate(90deg);transform-origin:right top;opacity:.3}.skill-ribbon span{font:800 10px 'Manrope';letter-spacing:.28em;color:#846c59}.skill-card{overflow:hidden}.skill-card:before{content:'';position:absolute;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(190,158,128,.22),transparent 68%);left:var(--mx,50%);top:var(--my,50%);transform:translate(-50%,-50%) scale(.7);opacity:0;transition:opacity .25s,transform .35s}.skill-card:hover:before{opacity:1;transform:translate(-50%,-50%) scale(1)}.skill-card h3,.skill-card p,.skill-card i,.skill-card>span{position:relative;z-index:2}
+.experience:before{content:'CAREER';position:absolute;right:1%;top:2%;font:800 clamp(80px,10vw,150px) 'Manrope';color:transparent;-webkit-text-stroke:1px rgba(105,82,64,.05);letter-spacing:-.07em}.career-item{transition:opacity .35s,transform .35s,background .35s}.career-board:hover .career-item{opacity:.48}.career-board .career-item:hover{opacity:1;transform:translateX(8px);background:linear-gradient(90deg,rgba(255,252,247,.52),transparent)}.career-item:hover .career-role h3{color:#5f4b3b}
+.projects{position:relative;isolation:isolate}.projects-spotlight{position:absolute;left:60%;top:8%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(218,194,170,.28),transparent 68%);filter:blur(20px);z-index:-1;animation:spotDrift 8s ease-in-out infinite alternate}@keyframes spotDrift{to{transform:translate(-120px,80px) scale(1.18)}}.project-card{position:relative}.project-card:after{content:'VIEW';position:absolute;right:22px;bottom:20px;font:800 8px 'Manrope';letter-spacing:.22em;color:#a68c75;opacity:0;transform:translateY(8px);transition:.3s}.project-card:hover:after{opacity:1;transform:none}.project-visual{isolation:isolate}.project-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.22) 47%,transparent 64%);transform:translateX(-120%);transition:transform .8s var(--ease-premium);z-index:8;pointer-events:none}.project-card:hover .project-visual:after{transform:translateX(120%)}
+.contact{position:relative;overflow:hidden}.contact-ghost{position:absolute;right:-20px;bottom:-80px;font:800 clamp(160px,24vw,360px) 'Manrope';letter-spacing:-.1em;color:transparent;-webkit-text-stroke:1px rgba(91,68,51,.07);pointer-events:none}.contact-card{position:relative;z-index:2}.contact-links a{position:relative;overflow:hidden}.contact-links a:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(201,174,148,.12),transparent);transform:translateX(-110%);transition:.55s}.contact-links a:hover:before{transform:translateX(110%)}
+.magnetic{will-change:transform}
+@media(max-width:900px){.hero-copy:before,.strategy-compass,.section-watermark,.skill-ribbon{display:none}.process-band{overflow:auto}.process-flow{min-width:650px}.hero-ghost-word{font-size:110px;left:72%;opacity:.7}}
+@media(max-width:600px){.preloader-inner span{font-size:64px}.process-band{width:calc(100% - 24px);padding:16px 18px}.hero-ghost-word{display:none}.contact-ghost{font-size:160px;bottom:-20px}.growth-orbit{display:none!important}}
+
+
+/* ===== V11 Cinematic Growth OS ===== */
+:root{--espresso:#241d18;--ivory:#f7f3ed;--gold:#b99a78;--v11ease:cubic-bezier(.16,.84,.24,1)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 12% 20%,rgba(255,255,255,.85),transparent 24%),radial-gradient(circle at 82% 14%,rgba(197,166,134,.18),transparent 28%),linear-gradient(180deg,#f6f2ec 0%,#f0ebe3 48%,#f7f3ed 100%)}
+.hero{overflow:visible}
+.hero-index{position:absolute;left:0;top:116px;font:700 9px 'Manrope';letter-spacing:.24em;color:#9c8b7c;writing-mode:vertical-rl;transform:rotate(180deg)}
+.hero-signal{position:absolute;right:0;top:116px;display:flex;gap:5px;align-items:center}.hero-signal span{width:5px;height:5px;border-radius:50%;background:#6d5b4b;animation:signalPulse 1.8s ease-in-out infinite}.hero-signal span:nth-child(2){animation-delay:.2s}.hero-signal span:nth-child(3){animation-delay:.4s}@keyframes signalPulse{0%,100%{opacity:.25;transform:scale(.85)}50%{opacity:1;transform:scale(1.3)}}
+.hero h1{position:relative;z-index:4;text-shadow:0 1px 0 rgba(255,255,255,.72)}.hero h1:after{content:'BMC';position:absolute;left:54%;top:44%;font-size:.36em;letter-spacing:.22em;color:transparent;-webkit-text-stroke:1px rgba(102,83,67,.16);transform:rotate(-90deg);transform-origin:center;pointer-events:none}
+.hero-main-card{box-shadow:0 40px 100px rgba(70,51,37,.19),0 1px 0 rgba(255,255,255,.9) inset!important}.hero-main-card:before{content:'';position:absolute;inset:-1px;z-index:4;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.55),transparent 22%,transparent 66%,rgba(255,255,255,.25));mix-blend-mode:screen;pointer-events:none;transform:translateX(-110%);animation:photoSweep 7s 1.4s ease-in-out infinite}@keyframes photoSweep{0%,66%,100%{transform:translateX(-120%)}78%{transform:translateX(120%)}}
+.glass-globe{position:absolute;right:-28px;top:72px;width:184px;height:184px;border-radius:50%;z-index:7;transform-style:preserve-3d;filter:drop-shadow(0 28px 35px rgba(69,49,34,.18));animation:globeFloat 5.8s ease-in-out infinite}.glass-globe:before{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.9),rgba(255,255,255,.18) 18%,rgba(190,156,123,.24) 44%,rgba(88,66,48,.16) 75%,rgba(255,255,255,.22));border:1px solid rgba(255,255,255,.72);box-shadow:inset 18px 14px 35px rgba(255,255,255,.5),inset -22px -18px 45px rgba(88,65,46,.16),0 24px 60px rgba(83,60,42,.12);backdrop-filter:blur(6px)}
+.globe-core{position:absolute;left:50%;top:50%;width:52px;height:52px;border-radius:50%;transform:translate(-50%,-50%) translateZ(40px);background:radial-gradient(circle at 35% 30%,#fff5e8,#b79877 55%,#6c5746);box-shadow:0 0 40px rgba(183,151,116,.28)}.globe-ring{position:absolute;inset:22px;border:1px solid rgba(84,65,50,.38);border-radius:50%;transform-style:preserve-3d}.globe-r1{transform:rotateX(68deg);animation:gRing1 8s linear infinite}.globe-r2{transform:rotateY(68deg);animation:gRing2 9s linear infinite reverse}.globe-r3{inset:40px;border-color:rgba(255,255,255,.65);animation:gRing3 11s linear infinite}.glass-globe b{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font:800 8px 'Manrope';letter-spacing:.22em;color:#57483d;z-index:5}@keyframes globeFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(3deg)}}@keyframes gRing1{to{transform:rotateX(68deg) rotateZ(360deg)}}@keyframes gRing2{to{transform:rotateY(68deg) rotateZ(360deg)}}@keyframes gRing3{to{transform:rotate(360deg)}}
+.cinematic-kpi{width:100%;padding:38px 0 120px;position:relative;background:linear-gradient(160deg,#1f1915,#2b221c 58%,#171311);color:#f7f0e8;overflow:hidden;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}.kpi-stage{width:min(1240px,calc(100% - 64px));margin:auto;position:relative;min-height:760px;padding-top:110px}.kpi-bg-word{position:absolute;left:50%;top:14px;transform:translateX(-50%);font:800 clamp(120px,22vw,330px)/.8 'Manrope';letter-spacing:-.09em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);white-space:nowrap;animation:kpiDrift 12s ease-in-out infinite alternate}@keyframes kpiDrift{to{transform:translateX(-48%) translateY(22px)}}
+.kpi-intro{position:relative;z-index:2;display:grid;grid-template-columns:.45fr 1.55fr;gap:70px;align-items:start;margin-bottom:80px}.kpi-intro>span{font:800 9px 'Manrope';letter-spacing:.26em;color:#c1a489;padding-top:12px}.kpi-intro h2{margin:0;font:600 clamp(44px,6vw,82px)/1.02 'Manrope';letter-spacing:-.055em;max-width:980px}.kpi-intro em{font-style:normal;color:#cbb094}.kpi-grid-cinema{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.11);border-radius:30px;overflow:hidden;position:relative;z-index:2;box-shadow:0 35px 80px rgba(0,0,0,.24)}.cinema-card{min-height:280px;padding:28px 26px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));position:relative;overflow:hidden;transition:.5s var(--v11ease)}.cinema-card:before{content:'';position:absolute;inset:auto -20% -55% -20%;height:80%;background:radial-gradient(circle at 50% 0,rgba(200,165,132,.22),transparent 62%);transform:translateY(30px);transition:.5s var(--v11ease)}.cinema-card:hover{background:rgba(255,255,255,.08);transform:translateY(-7px)}.cinema-card:hover:before{transform:none}.cinema-card small{display:block;font:700 9px 'Manrope';letter-spacing:.18em;color:#9f8976}.cinema-card strong{display:block;margin-top:70px;font:700 clamp(42px,5vw,70px)/1 'Manrope';letter-spacing:-.055em;color:#f8efe6}.cinema-card p{position:relative;z-index:2;margin:20px 0 0;color:#bcae9f;font-size:12px;line-height:1.65;max-width:190px}.kpi-orbit-line{position:absolute;right:-160px;bottom:-150px;width:500px;height:500px;border:1px solid rgba(198,163,129,.18);border-radius:50%}.kpi-orbit-line:before,.kpi-orbit-line:after{content:'';position:absolute;border:1px solid rgba(198,163,129,.12);border-radius:50%;inset:55px}.kpi-orbit-line:after{inset:120px}
+.about,.skills,.experience,.projects{position:relative;isolation:isolate}.about:before,.experience:before{content:'';position:absolute;left:-8vw;top:18%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(194,159,126,.16),transparent 68%);filter:blur(7px);z-index:-1}.skills:after,.projects:after{content:'';position:absolute;right:-6vw;bottom:8%;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(178,143,112,.12),transparent 70%);filter:blur(8px);z-index:-1}.photo-card{transition:transform .7s var(--v11ease),box-shadow .7s var(--v11ease);transform-style:preserve-3d}.about-photo:hover .photo-card{transform:rotate(-1deg) translateY(-8px) rotateY(-3deg);box-shadow:0 38px 80px rgba(64,50,38,.16)}.stat-grid article{position:relative;overflow:hidden;transition:.35s var(--v11ease)}.stat-grid article:after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:#90745d;transition:.45s var(--v11ease)}.stat-grid article:hover{transform:translateY(-4px)}.stat-grid article:hover:after{width:100%}
+.project-rail{display:flex;align-items:center;gap:16px;margin:-18px 0 28px;color:#9a8878;font:700 9px 'Manrope';letter-spacing:.16em}.project-rail i{height:1px;flex:1;background:linear-gradient(90deg,#cbbbaa,transparent)}.project-card{position:relative;isolation:isolate;box-shadow:0 18px 45px rgba(76,57,42,.05)}.project-card:before{content:'';position:absolute;inset:0;z-index:4;pointer-events:none;border-radius:inherit;background:linear-gradient(120deg,transparent 12%,rgba(255,255,255,.5) 45%,transparent 58%);transform:translateX(-120%);transition:transform .9s var(--v11ease)}.project-card:hover:before{transform:translateX(120%)}.project-card:hover{box-shadow:0 34px 90px rgba(71,52,38,.16)}
+.signature-scene{height:72vh;min-height:560px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden;background:#efe7dd;border-top:1px solid rgba(98,76,59,.12)}.signature-word{position:absolute;font:800 clamp(210px,37vw,570px)/.8 'Manrope';letter-spacing:-.11em;color:transparent;-webkit-text-stroke:1px rgba(82,64,50,.13);transform:translateX(-2%);animation:sigBreath 8s ease-in-out infinite alternate}@keyframes sigBreath{to{transform:translateX(2%) scale(1.025)}}.signature-scene p,.signature-scene span{position:relative;z-index:2}.signature-scene p{margin:0;font:700 clamp(26px,3vw,44px) 'Manrope';letter-spacing:-.04em;color:#3d3229}.signature-scene span{margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#8a7463}
+.reveal{transition:opacity .9s var(--v11ease),transform .9s var(--v11ease)!important}.reveal:not(.visible){opacity:.001!important;transform:translateY(34px) scale(.988)!important}.hero .reveal{opacity:1!important;transform:none!important}.performance-art .chart-lines i{transform-origin:bottom;transform:scaleY(.08);transition:transform .9s var(--v11ease)}.performance-art.is-live .chart-lines i{transform:scaleY(1)}.performance-art.is-live .chart-lines i:nth-child(2){transition-delay:.08s}.performance-art.is-live .chart-lines i:nth-child(3){transition-delay:.16s}.performance-art.is-live .chart-lines i:nth-child(4){transition-delay:.24s}.performance-art.is-live .chart-lines i:nth-child(5){transition-delay:.32s}
+@media(max-width:980px){.glass-globe{right:0;top:34px;transform:scale(.78)}.hero-index,.hero-signal{display:none}.kpi-stage{width:calc(100% - 40px);min-height:auto;padding-top:90px}.kpi-intro{grid-template-columns:1fr;gap:18px;margin-bottom:50px}.kpi-grid-cinema{grid-template-columns:1fr 1fr}.cinema-card{min-height:230px}.signature-scene{height:58vh}}
+@media(max-width:620px){.glass-globe{width:120px;height:120px;right:-10px;top:26px}.glass-globe b{display:none}.kpi-stage{width:calc(100% - 28px);padding-top:72px}.kpi-intro h2{font-size:38px}.kpi-grid-cinema{grid-template-columns:1fr}.cinema-card{min-height:190px}.cinema-card strong{margin-top:34px}.project-rail{display:none}.signature-scene{min-height:430px}.signature-word{font-size:190px}.signature-scene p{font-size:24px;text-align:center;padding:0 20px}.signature-scene span{font-size:9px}}
+
+</style>
+
+<style id="bmc-v8-safety">
+/* Deployment safety: primary content remains visible even if JS/observer fails. */
+.reveal{opacity:1!important;transform:none!important;}
+.hero-main-card img,.hero-mini-card img,.photo-card img,.ai-art img{display:block;width:100%;height:100%;object-fit:cover;}
+.hero-main-card img{object-position:center 22%;}
+.hero-mini-card img{object-position:center 20%;}
+.photo-card img{object-position:center 18%;}
+.ai-art img{object-position:center 25%;}
+</style>
+</head>
+<body class="js-enabled">
+  <div class="page-progress" id="pageProgress"></div>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader-inner"><span>BMC</span><small>MARKETING PORTFOLIO</small><i></i></div></div>
+  <div class="ambient-noise"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <header class="header">
+    <a class="logo" href="#home" aria-label="BMC Home"><span>BMC</span><i></i></a>
+    <nav class="nav" id="nav">
+      <a href="#about">Giới thiệu</a>
+      <a href="#skills">Kỹ năng</a>
+      <a href="#experience">Kinh nghiệm</a>
+      <a href="#projects">Dự án</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <a class="header-cta" href="#contact">Làm việc cùng tôi <span>↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu">☰</button>
+  </header>
+
+  <main>
+    
+    <section class="hero section" id="home">
+      <div class="hero-ghost-word" aria-hidden="true">MARKETING</div>
+      <div class="hero-index" aria-hidden="true">BMC / 2026</div>
+      <div class="hero-signal" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>Bùi Mạnh<br><span>Cường</span></h1>
+        <div class="role-line">
+          <span>I'm a</span>
+          <strong id="typingText">Marketing Strategist</strong><b>|</b>
+        </div>
+        <p class="hero-desc">Tôi theo đuổi một phong cách marketing chỉn chu, cân bằng giữa <strong>thẩm mỹ</strong>, <strong>hiệu quả</strong> và <strong>trải nghiệm thương hiệu</strong> — nơi nội dung, quảng cáo và hình ảnh cùng tạo nên tăng trưởng bền vững.</p>
+
+        <div class="impact-strip">
+          <article><strong>3+</strong><span>Năm làm Ads</span></article>
+          <article><strong>1</strong><span>Năm Leader</span></article>
+          <article><strong>2</strong><span>Dự án quản lý</span></article>
+          <article><strong>Tỷ+</strong><span>Doanh số / tháng</span></article>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projects">Xem dự án <span>↘</span></a>
+          <a class="btn-link" href="#about">Khám phá thêm</a>
+        </div>
+        <div class="contact-mini">
+          <a href="https://www.facebook.com/mcuong.dev.8123" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="mailto:mcuongdev.it@gmail.com">mcuongdev.it@gmail.com</a>
+          <a href="tel:0775292262">0775 292 262</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <div class="hero-stage">
+          <div class="stage-glow glow-1"></div>
+          <div class="stage-glow glow-2"></div>
+          <div class="stage-grid"></div>
+
+          <div class="glass-globe" data-parallax="0.46" aria-hidden="true">
+            <span class="globe-core"></span>
+            <i class="globe-ring globe-r1"></i><i class="globe-ring globe-r2"></i><i class="globe-ring globe-r3"></i>
+            <b>GROWTH</b>
+          </div>
+
+          <div class="growth-orbit" data-parallax="0.35" aria-hidden="true">
+            <i class="orbit-ring ring-x"></i>
+            <i class="orbit-ring ring-y"></i>
+            <i class="orbit-ring ring-z"></i>
+            <span class="orbit-core">GROWTH</span>
+          </div>
+
+          <div class="hero-main-card tilt-3d" data-tilt data-parallax="0.10">
+            <img src="assets/cv2.jpg" alt="Bùi Mạnh Cường" loading="eager" />
+            <div class="main-overlay">
+              <span>BMC · MARKETING</span>
+              <strong>Tinh gọn · Thẩm mỹ · Hiệu quả</strong>
+            </div>
+          </div>
+
+          <div class="hero-mini-card tilt-3d" data-tilt data-parallax="0.22">
+            <img src="assets/cv1.jpg" alt="Bùi Mạnh Cường với máy ảnh" loading="eager" />
+          </div>
+
+          <div class="hero-analytics tilt-3d" data-tilt data-parallax="0.16">
+            <div class="analytics-head">
+              <span>Tư duy làm việc</span>
+              <strong>Creative × Strategy × Performance</strong>
+            </div>
+            <div class="analytics-bars">
+              <i style="height:46%"></i>
+              <i style="height:64%"></i>
+              <i style="height:58%"></i>
+              <i style="height:82%"></i>
+              <i style="height:96%"></i>
+            </div>
+            <div class="analytics-legend">
+              <span>Creative</span><span>Ads</span><span>Data</span><span>Scale</span>
+            </div>
+          </div>
+
+          <div class="hero-chip chip-a" data-parallax="0.38">Meta Ads</div>
+          <div class="hero-chip chip-b" data-parallax="0.30">Content Strategy</div>
+          <div class="hero-chip chip-c" data-parallax="0.42">Tăng doanh số</div>
+
+          <div class="hero-kpi kpi-a" data-parallax="0.34"><small>LEADER</small><strong>01 năm</strong></div>
+          <div class="hero-kpi kpi-b" data-parallax="0.26"><small>MANAGED</small><strong>02 dự án</strong></div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about"><span>CUỘN XUỐNG</span><i>↓</i></a>
+    </section>
+
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>PERFORMANCE MARKETING</span><b>✦</b><span>META ADS</span><b>✦</b><span>CONTENT STRATEGY</span><b>✦</b><span>AI CONTENT</span><b>✦</b><span>CREATIVE DIRECTION</span><b>✦</b><span>GROWTH MINDSET</span><b>✦</b>
+        <span>PERFORMANCE MARKETING</span><b>✦</b><span>META ADS</span><b>✦</b><span>CONTENT STRATEGY</span><b>✦</b><span>AI CONTENT</span><b>✦</b><span>CREATIVE DIRECTION</span><b>✦</b><span>GROWTH MINDSET</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="process-band" aria-label="Quy trình marketing">
+      <div class="process-label">MARKETING SYSTEM</div>
+      <div class="process-flow">
+        <span>01 · Insight</span><i>→</i><span>02 · Offer</span><i>→</i><span>03 · Creative</span><i>→</i><span>04 · Media</span><i>→</i><span>05 · Scale</span>
+      </div>
+    </section>
+
+    <section class="cinematic-kpi" id="impact" aria-label="Marketing impact">
+      <div class="kpi-stage">
+        <div class="kpi-bg-word" aria-hidden="true">GROWTH</div>
+        <div class="kpi-intro reveal">
+          <span>MARKETING IMPACT</span>
+          <h2>Không chỉ chạy quảng cáo.<br><em>Tôi xây hệ thống tăng trưởng.</em></h2>
+        </div>
+        <div class="kpi-grid-cinema">
+          <article class="cinema-card reveal"><small>01</small><strong>3+</strong><p>Năm thực chiến Ads & Performance</p></article>
+          <article class="cinema-card reveal"><small>02</small><strong>120M</strong><p>Doanh số/ngày từng đạt ở mảng dược phẩm</p></article>
+          <article class="cinema-card reveal"><small>03</small><strong>1.2B</strong><p>Doanh số cá nhân/tháng từng đạt</p></article>
+          <article class="cinema-card reveal"><small>04</small><strong>4</strong><p>Nhóm ngành đã triển khai thực tế</p></article>
+        </div>
+        <div class="kpi-orbit-line" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="about section" id="about"><div class="section-watermark" aria-hidden="true">THINK · TEST · SCALE</div>
+      <div class="section-label reveal">01 — GIỚI THIỆU</div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="photo-card"><img src="assets/cv1.jpg" alt="Bùi Mạnh Cường với máy ảnh" loading="lazy" /></div>
+          <span class="photo-note">Sáng tạo không chỉ để đẹp.<br>Nó phải tạo ra chuyển động.</span>
+        </div>
+        <div class="about-content reveal delay-1">
+          <p class="kicker">Một marketer yêu cả con số lẫn ý tưởng.</p>
+          <h2>Tôi xây marketing bằng <span>tư duy tăng trưởng</span> và sự sáng tạo có mục tiêu.</h2>
+          <p>Trong 3 năm làm quảng cáo, tôi học được rằng một chiến dịch tốt không đến từ một “mẹo” duy nhất. Nó là sự kết hợp của insight đúng, thông điệp đúng, nội dung đủ thuyết phục và khả năng tối ưu liên tục dựa trên dữ liệu.</p>
+          <p>Từ dược phẩm, thực phẩm chức năng, gia dụng, mỹ phẩm đến máy móc cơ khí, tôi đã có cơ hội làm việc với cả thị trường trong nước và quốc tế; từng bước đi từ vị trí nhân viên đến leader. Tôi ưu tiên xây một hệ thống marketing có thể đo lường, cải thiện và tăng trưởng bền vững theo thời gian.</p>
+          <div class="stat-grid">
+            <article><strong>03+</strong><span>Năm kinh nghiệm Ads</span></article>
+            <article><strong>01</strong><span>Năm kinh nghiệm Leader</span></article>
+            <article><strong>02</strong><span>Dự án từng quản lý</span></article>
+            <article><strong>Tỷ+</strong><span>Doanh số / tháng</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills"><div class="skill-ribbon" aria-hidden="true"><span>PERFORMANCE</span><span>CREATIVE</span><span>AI</span><span>STRATEGY</span></div>
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-label">02 — KỸ NĂNG</div>
+          <h2>Bộ kỹ năng<br><span>Marketing thực chiến.</span></h2>
+        </div>
+        <p>Từ quảng cáo đến nội dung, từ AI đến quản lý dự án — tôi tập trung vào những kỹ năng giúp một chiến dịch đi từ ý tưởng đến kết quả.</p>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card reveal skill-motion"><span>01</span><div><h3>Meta Ads / Facebook Ads</h3><p>Lên cấu trúc campaign, testing creative, tối ưu ngân sách, đọc chỉ số, scale và kiểm soát hiệu suất.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>02</span><div><h3>Performance Marketing</h3><p>Tư duy funnel, phân tích hành vi khách hàng, tối ưu CPA/CPL/ROAS và kết nối quảng cáo với mục tiêu kinh doanh.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>03</span><div><h3>Content Strategy & Copywriting</h3><p>Xây insight, angle, hook, thông điệp, content pillar, kịch bản quảng cáo và nội dung chuyển đổi.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>04</span><div><h3>AI Content Workflow</h3><p>Ứng dụng AI trong nghiên cứu, ideation, viết nội dung, xây prompt, hệ thống hóa quy trình và tăng tốc sản xuất.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>05</span><div><h3>AI Video & Creative Production</h3><p>Phát triển concept, prompt hình ảnh/video, creative variation và quy trình sản xuất nội dung bằng AI.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>06</span><div><h3>Data & Optimization</h3><p>Đọc dữ liệu quảng cáo, tìm điểm nghẽn, so sánh biến thể và đưa quyết định tối ưu dựa trên số liệu.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>07</span><div><h3>Team & Project Management</h3><p>Phân công, kiểm soát tiến độ, định hướng creative và phối hợp giữa Ads – Content – Design.</p></div><i>↗</i></article>
+        <article class="skill-card reveal skill-motion"><span>08</span><div><h3>Visual & Design Direction</h3><p>Tư duy bố cục, visual direction, thumbnail/banner/ad creative và đảm bảo hình ảnh nhất quán với thông điệp.</p></div><i>↗</i></article>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="experience-title reveal">
+        <span class="glow-dot"></span>
+        <div>
+          <div class="section-label">03 — KINH NGHIỆM</div>
+          <h2>Hành trình &<br><span>kinh nghiệm</span></h2>
+        </div>
+      </div>
+
+      <div class="career-board reveal delay-1">
+        <div class="career-item active">
+          <div class="career-role">
+            <h3>Marketing Leader</h3>
+            <p>Duli Việt Nam</p>
+          </div>
+          <div class="career-time"><span>01/2026</span><b>— NAY</b></div>
+          <div class="career-desc">
+            <p>Phụ trách marketing cho nhóm sản phẩm <strong>dược phẩm – linh chi</strong>, trực tiếp triển khai và tối ưu hoạt động quảng cáo theo mục tiêu doanh số; phối hợp nội dung, creative và vận hành để cải thiện hiệu suất theo từng giai đoạn.</p>
+            <div class="career-tags"><span>Dược phẩm</span><span>Linh chi</span><span>Performance</span><span>Doanh số: 120 triệu/ngày</span></div>
+          </div>
+        </div>
+
+        <div class="career-item">
+          <div class="career-role">
+            <h3>Marketing Leader</h3>
+            <p>Datyso Việt Nam</p>
+          </div>
+          <div class="career-time"><span>09/2025</span><b>— 01/2026</b></div>
+          <div class="career-desc">
+            <p>Triển khai kế hoạch marketing tổng thể cho nhóm sản phẩm <strong>máy móc cơ khí</strong>; xây kế hoạch theo tuần/tháng, theo dõi và báo cáo hiệu suất, phân tích dữ liệu, kiểm soát tiến độ và phối hợp giữa Ads – Content – Design.</p>
+            <p>Song song với vận hành, tôi tham gia <strong>xây dựng đội nhóm, phát triển năng lực team</strong>, chuẩn hóa cách làm việc và tìm hướng khai thác các key sản phẩm mới dựa trên insight, nhu cầu thị trường và dữ liệu quảng cáo.</p>
+            <div class="career-tags"><span>Team Building</span><span>Planning</span><span>Reporting</span><span>Product Key</span><span>Cơ khí</span></div>
+          </div>
+        </div>
+
+        <div class="career-item">
+          <div class="career-role">
+            <h3>Marketing Executive · Leader tập sự</h3>
+            <p>Công Ty Dược Phẩm Thiên Dược - HH</p>
+          </div>
+          <div class="career-time"><span>09/2024</span><b>— 09/2025</b></div>
+          <div class="career-desc">
+            <p>Triển khai marketing cho nhiều nhóm ngành gồm <strong>gia dụng, dược phẩm và mỹ phẩm</strong>, làm việc với cả thị trường trong nước và quốc tế. Phụ trách quảng cáo, nghiên cứu thị trường, insight khách hàng, creative angle và tối ưu hiệu suất chiến dịch.</p>
+            <p>Trong giai đoạn này, tôi đồng thời đảm nhiệm vai trò <strong>leader tập sự</strong>, tham gia hỗ trợ điều phối công việc và phối hợp triển khai cùng đội nhóm.</p>
+            <div class="career-tags"><span>Domestic</span><span>International</span><span>Ads</span><span>Creative</span><span>Doanh số cá nhân: 1,2 tỷ/tháng</span></div>
+          </div>
+        </div>
+
+        <div class="career-item">
+          <div class="career-role">
+            <h3>Nhân viên Marketing</h3>
+            <p>Big Group</p>
+          </div>
+          <div class="career-time"><span>02/2024</span><b>— 09/2024</b></div>
+          <div class="career-desc">
+            <p>Bắt đầu hành trình marketing chuyên nghiệp với vai trò nhân viên, tập trung triển khai <strong>Facebook Ads</strong> cho các sản phẩm thuộc nhóm <strong>dược phẩm – thực phẩm chức năng</strong>. Công việc chính gồm xây campaign, theo dõi chỉ số, testing nội dung quảng cáo và tối ưu hiệu suất theo dữ liệu thực tế.</p>
+            <div class="career-tags"><span>Facebook Ads</span><span>Dược phẩm</span><span>TPCN</span><span>Testing</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects"><div class="projects-spotlight" aria-hidden="true"></div>
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-label">04 — DỰ ÁN</div>
+          <h2>Marketing không chỉ<br>là chạy quảng cáo. <span>Nó là hệ thống.</span></h2>
+        </div>
+        <p>Một vài nhóm dự án minh họa cách tôi kết hợp performance, creative, content và AI trong quá trình làm marketing.</p>
+      </div>
+
+      <div class="project-rail reveal" aria-hidden="true"><span>CASE 01</span><i></i><span>CASE 02</span><i></i><span>CASE 03</span><i></i><span>CASE 04</span></div>
+      <div class="project-showcase">
+        <article class="project-card project-main reveal tilt-card" data-tilt>
+          <div class="project-visual performance-art">
+            <div class="metric-card m1"><small>ROAS</small><strong>↑</strong></div>
+            <div class="metric-card m2"><small>CPA</small><strong>↓</strong></div>
+            <div class="chart-lines"><i></i><i></i><i></i><i></i><i></i></div>
+            <span class="project-index">01</span>
+          </div>
+          <div class="project-copy">
+            <small>PERFORMANCE MARKETING</small>
+            <h3>Tối ưu quảng cáo từ dữ liệu đến creative</h3>
+            <p>Xây cấu trúc test, đọc tín hiệu thị trường, tìm winning angle và cải thiện hiệu suất bằng vòng lặp dữ liệu – nội dung – quảng cáo.</p>
+            <div class="tag-row"><span>Meta Ads</span><span>Testing</span><span>Optimization</span><span>Scaling</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal tilt-card" data-tilt>
+          <div class="project-visual content-art">
+            <div class="word-stack"><b>INSIGHT</b><b>ANGLE</b><b>CONTENT</b></div>
+            <span class="project-index">02</span>
+          </div>
+          <div class="project-copy"><small>CONTENT SYSTEM</small><h3>Biến insight thành hệ thống nội dung bán hàng</h3><p>Từ nỗi đau khách hàng đến hook, thông điệp, format và creative variation cho từng giai đoạn của funnel.</p><div class="tag-row"><span>Insight</span><span>Copy</span><span>Creative</span></div></div>
+        </article>
+
+        <article class="project-card reveal delay-1 tilt-card" data-tilt>
+          <div class="project-visual ai-art">
+            <img src="assets/cv3.jpg" alt="Bùi Mạnh Cường" loading="lazy" />
+            <div class="ai-overlay"><span>AI</span><b>CONTENT<br>WORKFLOW</b></div>
+            <span class="project-index">03</span>
+          </div>
+          <div class="project-copy"><small>AI & CREATIVE</small><h3>Tăng tốc sản xuất nội dung bằng AI</h3><p>Ứng dụng AI vào research, prompt, hình ảnh, video và tạo nhiều biến thể creative mà vẫn giữ đúng định hướng thương hiệu.</p><div class="tag-row"><span>AI Content</span><span>AI Video</span><span>Prompting</span></div></div>
+        </article>
+
+        <article class="project-card wide reveal tilt-card" data-tilt>
+          <div class="project-visual campaign-art"><div class="campaign-copy"><span>IDEA</span><strong>→</strong><span>MESSAGE</span><strong>→</strong><span>RESULT</span></div><span class="project-index">04</span></div>
+          <div class="project-copy"><small>CAMPAIGN DIRECTION</small><h3>Từ một ý tưởng thành chiến dịch có mục tiêu</h3><p>Kết nối sản phẩm, khách hàng, creative và media thành một câu chuyện nhất quán — đủ rõ để triển khai, đủ linh hoạt để tối ưu.</p><div class="tag-row"><span>Strategy</span><span>Campaign</span><span>Project Management</span></div></div>
+        </article>
+      </div>
+      <p class="project-note reveal">Số liệu và case study chi tiết sẽ được cập nhật bằng dữ liệu dự án thực tế ở phiên bản tiếp theo.</p>
+    </section>
+
+    <section class="contact section" id="contact"><div class="contact-ghost" aria-hidden="true">BMC</div>
+      <div class="contact-card reveal">
+        <p>Bạn đang có một dự án cần tăng trưởng?</p>
+        <h2>Cùng biến một ý tưởng tốt<br>thành <span>kết quả thật.</span></h2>
+        <div class="contact-links">
+          <a href="https://www.facebook.com/mcuong.dev.8123" target="_blank" rel="noreferrer"><small>FACEBOOK</small><strong>facebook.com/mcuong.dev.8123</strong><i>↗</i></a>
+          <a href="mailto:mcuongdev.it@gmail.com"><small>EMAIL</small><strong>mcuongdev.it@gmail.com</strong><i>↗</i></a>
+          <a href="tel:0775292262"><small>ĐIỆN THOẠI</small><strong>0775 292 262</strong><i>↗</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="signature-scene" aria-label="BMC signature">
+      <div class="signature-word" aria-hidden="true">BMC</div>
+      <p>Strategy × Creative × Performance</p>
+      <span>Make attention become growth.</span>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo footer-logo" href="#home"><span>BMC</span><i></i></a>
+    <p>© <span id="year"></span> Bùi Mạnh Cường — Marketing Portfolio</p>
+    <a href="#home">Lên đầu trang ↑</a>
+  </footer>
+
+  <script>
+// Motion is progressive enhancement: without JS, all content remains visible.
+document.body.classList.add('motion-ready');
+
+const roles = ['Marketing Strategist','Performance Marketer','Content & Creative','Growth Marketer'];
+const typing = document.getElementById('typingText');
+let roleIndex = 0, charIndex = roles[0].length, deleting = false;
+function typeLoop(){
+  if(!typing) return;
+  const word = roles[roleIndex];
+  if(!deleting){
+    charIndex++;
+    typing.textContent = word.slice(0,charIndex);
+    if(charIndex >= word.length){deleting=true;return setTimeout(typeLoop,1400)}
+  }else{
+    charIndex--;
+    typing.textContent = word.slice(0,charIndex);
+    if(charIndex<=0){deleting=false;roleIndex=(roleIndex+1)%roles.length}
+  }
+  setTimeout(typeLoop,deleting?34:58);
+}
+setTimeout(typeLoop,1200);
+
+const revealObserver = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible'); revealObserver.unobserve(entry.target)}
+  });
+},{threshold:.11,rootMargin:'0px 0px -4% 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  if(el.closest('.hero')) el.classList.add('visible');
+  else revealObserver.observe(el);
+});
+
+const careerBoard=document.querySelector('.career-board');
+if(careerBoard){
+  const timelineObserver=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){careerBoard.classList.add('timeline-live');timelineObserver.disconnect()}},{threshold:.16});
+  timelineObserver.observe(careerBoard);
+}
+
+const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+menuBtn?.addEventListener('click',()=>nav.classList.toggle('mobile-open'));
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('mobile-open')));
+
+const header=document.querySelector('.header');
+const onScroll=()=>header?.classList.toggle('scrolled',window.scrollY>24);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+const cursor=document.getElementById('cursorDot');
+if(cursor && matchMedia('(pointer:fine)').matches){
+  window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'},{passive:true});
+}
+
+// Hero cursor spotlight + layered parallax
+const hero=document.querySelector('.hero');
+const stage=document.querySelector('.hero-stage');
+if(hero && stage && matchMedia('(pointer:fine)').matches){
+  stage.addEventListener('pointermove',e=>{
+    const r=stage.getBoundingClientRect();
+    const nx=(e.clientX-r.left)/r.width-.5;
+    const ny=(e.clientY-r.top)/r.height-.5;
+    stage.querySelectorAll('[data-parallax]').forEach(el=>{
+      const d=parseFloat(el.dataset.parallax||0);
+      el.style.setProperty('--parallax-x',`${nx*42*d}px`);
+      el.style.setProperty('--parallax-y',`${ny*34*d}px`);
+    });
+    hero.style.setProperty('--spot-x',`${((e.clientX-hero.getBoundingClientRect().left)/hero.clientWidth)*100}%`);
+    hero.style.setProperty('--spot-y',`${((e.clientY-hero.getBoundingClientRect().top)/hero.clientHeight)*100}%`);
+  });
+  stage.addEventListener('pointerleave',()=>stage.querySelectorAll('[data-parallax]').forEach(el=>{el.style.setProperty('--parallax-x','0px');el.style.setProperty('--parallax-y','0px')}));
+}
+
+// Perspective tilt. Uses CSS variables so base transforms can remain elegant.
+document.querySelectorAll('[data-tilt]').forEach(el=>{
+  if(!matchMedia('(pointer:fine)').matches) return;
+  el.addEventListener('pointermove',e=>{
+    const r=el.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    const max=el.classList.contains('project-card')?4.5:7;
+    el.style.transform=`perspective(1100px) rotateX(${-y*max}deg) rotateY(${x*max}deg) translate3d(var(--parallax-x,0px),var(--parallax-y,0px),0)`;
+  });
+  el.addEventListener('pointerleave',()=>{el.style.transform='';});
+});
+
+// Apply parallax translation to non-tilt floating elements.
+const parallaxEls=[...document.querySelectorAll('[data-parallax]:not([data-tilt])')];
+const parallaxStyle=()=>parallaxEls.forEach(el=>{
+  el.style.translate=`var(--parallax-x,0px) var(--parallax-y,0px)`;
+});
+if(stage){stage.addEventListener('pointermove',parallaxStyle);stage.addEventListener('pointerleave',parallaxStyle)}
+
+
+// V10 editorial interactions
+const preloader=document.getElementById('preloader');
+window.addEventListener('load',()=>setTimeout(()=>preloader?.classList.add('done'),420));
+setTimeout(()=>preloader?.classList.add('done'),1800);
+
+const progress=document.getElementById('pageProgress');
+const updateProgress=()=>{
+  const max=document.documentElement.scrollHeight-innerHeight;
+  if(progress) progress.style.width=(max>0?scrollY/max*100:0)+'%';
+};
+updateProgress();addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);
+
+// Pointer-aware glow on skill cards
+document.querySelectorAll('.skill-card').forEach(card=>{
+  card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',(e.clientX-r.left)+'px');card.style.setProperty('--my',(e.clientY-r.top)+'px')});
+});
+
+// Magnetic interactions kept subtle
+if(matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.btn-primary,.header-cta,.contact-links a').forEach(el=>{
+    el.classList.add('magnetic');
+    el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.10;const y=(e.clientY-r.top-r.height/2)*.14;el.style.transform=`translate(${x}px,${y}px)`});
+    el.addEventListener('pointerleave',()=>el.style.transform='');
+  });
+}
+
+// Scroll-linked editorial drift
+let ticking=false;
+addEventListener('scroll',()=>{
+  if(ticking) return; ticking=true;
+  requestAnimationFrame(()=>{
+    const y=scrollY;
+    document.documentElement.style.setProperty('--scroll-shift',Math.min(y*.035,38)+'px');
+    const ghost=document.querySelector('.hero-ghost-word');
+    if(ghost && y<innerHeight*1.2) ghost.style.translate=`0 ${y*.07}px`;
+    ticking=false;
+  });
+},{passive:true});
+
+// V11 cinematic depth / scroll choreography
+const cinemaSection=document.querySelector('.cinematic-kpi');
+if(cinemaSection){const cards=[...cinemaSection.querySelectorAll('.cinema-card')];const ioCinema=new IntersectionObserver(([entry])=>{if(!entry.isIntersecting)return;cards.forEach((card,i)=>setTimeout(()=>card.classList.add('visible'),i*110));ioCinema.disconnect()},{threshold:.22});ioCinema.observe(cinemaSection)}
+if(matchMedia('(pointer:fine)').matches){document.querySelectorAll('.kpi-stage,.signature-scene').forEach(scene=>{scene.addEventListener('pointermove',e=>{const r=scene.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;const bg=scene.querySelector('.kpi-bg-word,.signature-word');if(bg&&bg.classList.contains('kpi-bg-word'))bg.style.transform=`translateX(calc(-50% + ${x*18}px)) translateY(${y*12}px)`})})}
+const perf=document.querySelector('.performance-art');if(perf){const perfObs=new IntersectionObserver(([entry])=>{if(entry.isIntersecting){perf.classList.add('is-live');perfObs.disconnect()}},{threshold:.35});perfObs.observe(perf)}
+
+  </script>
+</body>
+</html>
